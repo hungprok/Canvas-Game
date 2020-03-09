@@ -1,0 +1,22 @@
+</style>
+<title>Canvas image</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="450" height="329"></canvas>
+    <script>
+        setInterval(function() {
+            Ti.API.info('Scrolling To Index: ' + viewIndex);
+            scrollView.scrollToView(viewIndex);
+            if (viewIndex == 4) {
+                viewIndex = 0;
+                scrollView.scrollToView(viewIndex);
+            } else {
+                scrollView.scrollToView(viewIndex);
+                viewIndex++;
+            }
+        }, 6000);
+    </script>
+</body>
+
+</html>
